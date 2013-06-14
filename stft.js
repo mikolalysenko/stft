@@ -31,7 +31,7 @@ function forwardSTFT(frame_size, onstft, options) {
   var real     = ndarray(out_x)
   var imag     = ndarray(out_y)
   
-  function ondata(frame) {
+  return function stft(frame) {
     var n = frame_size
     var i, j, k
     var W = window, B = buffer, X = out_x, Y = out_y
@@ -59,8 +59,6 @@ function forwardSTFT(frame_size, onstft, options) {
     }
     ptr = i
   }
-  
-  return ondata
 }
 
 function inverseSTFT(frame_size, onistft, options) {
@@ -75,7 +73,7 @@ function inverseSTFT(frame_size, onistft, options) {
   var real     = ndarray(window)
   var imag     = ndarray(window)
   
-  function ondata(X, Y) {
+  return function istft(X, Y) {
     var n = frame_size
     var i, j, k
     var W = window, B = buffer
@@ -106,8 +104,6 @@ function inverseSTFT(frame_size, onistft, options) {
       sptr -= n
     }
   }
-  
-  return ondata
 }
 
 function STFT(dir, frame_size, ondata, options) {
