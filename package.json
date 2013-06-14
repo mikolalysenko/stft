@@ -1,0 +1,42 @@
+{
+  "name": "stft",
+  "version": "0.0.0",
+  "description": "Short time Fourier transform",
+  "main": "stft.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "ndarray": "~0.2.4",
+    "ndarray-fft": "~0.0.2"
+  },
+  "devDependencies": {
+    "tape": "~1.0.4"
+  },
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikolalysenko/stft.git"
+  },
+  "keywords": [
+    "short",
+    "time",
+    "fourier",
+    "transform",
+    "fft",
+    "stft",
+    "audio",
+    "dsp",
+    "signal",
+    "processing"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "5f024f4ae91c64a9f00f3e91782c0b0151e16fc1",
+  "bugs": {
+    "url": "https://github.com/mikolalysenko/stft/issues"
+  }
+}
